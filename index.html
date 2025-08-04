@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceBlazer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <div class="start-content">
+                <img id="logoImage" src="assets/spaceship.png" alt="SpaceBlazer Logo" class="logo">
+                <button id="startButton" class="start-btn">Start</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <div class="game-ui">
+                <button id="restartButton" class="restart-btn">
+                    <img src="assets/reload.png" alt="Restart" class="restart-icon">
+                </button>
+                <div id="scoreDisplay" class="score">Score: <span id="scoreValue">0</span></div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            
+            <!-- Power-up Indicators -->
+            <div id="powerUpIndicator" class="power-up-indicator hidden">
+                <div id="powerUpText"></div>
+                <div id="powerUpTimer"></div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen">
+            <div class="game-over-content">
+                <h1>Game Over</h1>
+                <div class="final-score">Final Score: <span id="finalScore">0</span></div>
+                <button id="playAgainButton" class="start-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
